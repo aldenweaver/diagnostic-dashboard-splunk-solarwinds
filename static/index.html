@@ -1,0 +1,71 @@
+ <!--<!DOCTYPE html>-->
+ <!--<html>-->
+    <!--<head>-->
+      <!--<link href="/static/css/style.css" rel="stylesheet">-->
+      <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>-->
+      <!--<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>-->
+      <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>-->
+
+        <!--<script src="/pico/client.js"></script>-->
+    <!--<script>-->
+        <!--pico.load("splunk");-->
+        <!--pico.load("solarwinds");-->
+    <!--</script>-->
+
+    <!--</head>-->
+    <!--<body>-->
+
+
+      <!--<div id="splunk_result"></div>-->
+      <!--<script>-->
+        <!--splunk.splunkQuery(function(response){-->
+            <!--document.getElementById('splunk_result').innerHTML = response;-->
+        <!--});-->
+      <!--</script>-->
+      <!--<script type="text/babel" src="static/js/SplunkResult.js"></script>-->
+
+      <!--<div id="solarwinds_result"></div>-->
+      <!--<script>-->
+        <!--splunk.solarwindsQuery(function(response){-->
+            <!--document.getElementById('solarwinds_result').innerHTML = response;-->
+        <!--});-->
+      <!--</script>-->
+      <!--<script type="text/babel" src="static/js/SolarwindsResult.js"></script>-->
+    <!--</body>-->
+ <!--</html>-->
+
+
+ <!DOCTYPE html>
+ <html>
+    <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+      <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+        <script src="/pico/client.js"></script>
+    <script>
+        pico.client.load("splunk");
+        pico.client.load("solarwinds");
+    </script>
+
+    </head>
+    <body>
+
+
+      <div id="splunk_result"></div>
+      <script>
+        splunk.splunkQuery(function(response){
+            document.getElementById('splunk_result').innerHTML = response;
+        });
+      </script>
+      <script type="text/babel" src="static/js/SplunkResult.js"></script>
+
+      <div id="solarwinds_result"></div>
+      <script>
+        solarwinds.solarwindsQuery(function(response){
+            document.getElementById('solarwinds_result').innerHTML = response;
+        });
+      </script>
+      <script type="text/babel" src="static/js/SolarwindsResult.js"></script>
+    </body>
+ </html>
